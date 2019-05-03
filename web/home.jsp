@@ -15,7 +15,7 @@
         <h1>Bienvenue ! </h1>
         <form action="Home" method="POST">
             <input type="hidden" name="button" id="button" value="home">
-            <input type="submit" name="commande" id="element" value="Commande" onclick="document.getElementById('button').value = 'commande';">
+            <input type="submit" name="commande" id="commande" value="Commande" onclick="document.getElementById('button').value = 'commande';">
         </form>
 </html>
 

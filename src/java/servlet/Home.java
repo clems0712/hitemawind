@@ -48,7 +48,7 @@ public class Home extends HttpServlet {
         String button = request.getParameter("button");
         Implementation data = new Implementation();
         switch (button) {
-            case "commmande":
+            case "commande":
                 request.setAttribute("data", data.getListOrders());
                 request.getRequestDispatcher("/listeCommandes.jsp").forward(request, response);
             default:
