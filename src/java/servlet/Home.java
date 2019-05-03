@@ -50,9 +50,10 @@ public class Home extends HttpServlet {
         switch (button) {
             case "commande":
                 request.setAttribute("data", data.getListOrders());
+                System.out.println("servlet.Home.doPost()"+ data.getListOrders());
                 request.getRequestDispatcher("/listeCommandes.jsp").forward(request, response);
             default:
-                doGet(request,response);
+                doGet(request, response);
         }
     }
 
