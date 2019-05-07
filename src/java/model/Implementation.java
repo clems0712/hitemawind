@@ -19,12 +19,13 @@ public class Implementation {
         EntityManagerFactory entityManagerFactory;
 
     public Implementation() {
-            entityManagerFactory = Persistence.createEntityManagerFactory("TeamworkPhilippe");
+            entityManagerFactory = Persistence.createEntityManagerFactory("TeamworkPU");
             entityManager = entityManagerFactory.createEntityManager();
     }
     
     public List<Orders> getListOrders(){
        List<Orders> orders = entityManager.createNamedQuery("Orders.findAll").getResultList();
+       System.out.println("model.Implementation.getListOrders() : " + orders.toString());
        return orders;
     }
 }

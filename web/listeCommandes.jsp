@@ -17,6 +17,7 @@
             <input type="hidden" name="button" id="button" value="home">
             <input type="submit" value="< Retour" onclick="document.getElementById('button').value = 'home';">
         </form>
+        ${data}
         <ul>
             <c:forEach var="d" items="${data}">
                 <li>${d}</li>
