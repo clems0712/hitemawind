@@ -17,11 +17,39 @@
             <input type="hidden" name="button" id="button" value="home">
             <input type="submit" value="< Retour" onclick="document.getElementById('button').value = 'home';">
         </form>
-        ${data}
         <ul>
-            <c:forEach var="d" items="${data}">
-                <li>${d}</li>
+            <table>
+                <tr>
+                    <th>Id Commande</th>
+                    <th>Employé</th>
+                    <th>Client</th>
+                    <th>Date Commande</th>
+                    <th>Expéditeur</th>
+                    <th>Ville expéditeur</th>
+                    <th>Date envoi</th>
+                    <th>Taxes</th>
+                    <th>Type paiement</th>
+                    <th>Notes</th> 
+                    <th>Statut</th>
+                </tr>
+                <tbody>
+            <c:forEach var="data" items="${data}">
+                <tr>
+                    <td>${data.getId()}</td>
+                    <td>${data.getEmployeeId().getLastName()}</td>
+                    <td>${data.getCustomerId().getLastName()}</td>
+                    <td>${data.getOrderDate()}</td>
+                    <td>${data.getShipName()}</td>
+                    <td>${data.getShipCity()}</td>
+                    <td>${data.getShippedDate()}</td>
+                    <td>${data.getTaxes()}</td>
+                    <td>${data.getPaymentType()}</td>
+                    <td>${data.getNotes()}</td>
+                    <td>${data.getStatusId().getStatusName()}</td>
+                </tr>
             </c:forEach>
+                </tbody>
+            </table>
         </ul>
     </body>
 </html>
