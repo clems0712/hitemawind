@@ -33,10 +33,8 @@ public class TestStock extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        InventoryTransactionsData data = new InventoryTransactionsData();
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
-                request.setAttribute("data", data.getListTransaction());
                 request.getRequestDispatcher("/stock.jsp").forward(request, response);
         }
     }
@@ -53,6 +51,8 @@ public class TestStock extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        InventoryTransactionsData data = new InventoryTransactionsData();
+        request.setAttribute("data", data.getListTransaction());
         request.getRequestDispatcher("/stock.jsp").forward(request, response);
     }
 

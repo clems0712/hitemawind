@@ -18,7 +18,7 @@ public class InventoryTransactionsData {
     EntityManagerFactory entityManagerFactory;
     
     public InventoryTransactionsData() {
-            entityManagerFactory = Persistence.createEntityManagerFactory("HitemaWind");
+            entityManagerFactory = Persistence.createEntityManagerFactory("TeamworkPU");
             entityManager = entityManagerFactory.createEntityManager();
     }
     
