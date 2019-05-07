@@ -19,13 +19,13 @@ public class PurchaseOrderDetailsData {
         EntityManagerFactory entityManagerFactory;
 
     public PurchaseOrderDetailsData() {
-            entityManagerFactory = Persistence.createEntityManagerFactory("PurchaseOrderDetails");
+            entityManagerFactory = Persistence.createEntityManagerFactory("TeamworkPU");
             entityManager = entityManagerFactory.createEntityManager();
     }
     
     public List<PurchaseOrderDetails> getListPurchaseOrderDetails(){
-       List<PurchaseOrderDetails> users = entityManager.createNamedQuery("PurchaseOrderDetails.findAll").getResultList();
-       return users;
+       List<PurchaseOrderDetails> PurchaseOrderDetails = entityManager.createNamedQuery("PurchaseOrderDetails.findAll").getResultList();
+       return PurchaseOrderDetails;
     }
     
     
