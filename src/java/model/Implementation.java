@@ -28,13 +28,18 @@ public class Implementation {
        return orders;
     }
     
-    public List<Orders> getListInvoices(){
-       List<Orders> orders = entityManager.createNamedQuery("Invoices.findAll").getResultList();
-       return orders;
+    public List<Invoices> getListInvoices(){
+       List<Invoices> invoices = entityManager.createNamedQuery("Invoices.findAll").getResultList();
+       return invoices;
     }
     
     public List<Employees> getListEmployes() {
         List<Employees> employes = entityManager.createNamedQuery("Employees.findAll").getResultList();
         return employes;
+    }
+    
+    public List<Customers> getListCustomezs() {
+        List<Customers> clients = entityManager.createNamedQuery("Customers.findAll").getResultList();
+        return clients;
     }
 }

@@ -57,9 +57,12 @@ public class Home extends HttpServlet {
             case "facture" :
                 request.setAttribute("data", data.getListInvoices());
                 request.getRequestDispatcher("/listInvoices.jsp").forward(request, response);
-            case "infoUser": 
+            case "employe": 
                 request.setAttribute("data", data.getListEmployes());
-                request.getRequestDispatcher("/listInfoUser.jsp").forward(request, response);
+                request.getRequestDispatcher("/listEmployes.jsp").forward(request, response);
+            case "client": 
+                request.setAttribute("data", data.getListCustomezs());
+                request.getRequestDispatcher("/listClients.jsp").forward(request, response);
             default:
                 doGet(request, response);
         }
