@@ -12,15 +12,15 @@
         <servlet-class>servlet.TestStock</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>Products</servlet-name>
+        <servlet-name>ProductsServlet</servlet-name>
         <servlet-class>servlet.ProductsServlet</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>Suppliers</servlet-name>
+        <servlet-name>SuppliersServlet</servlet-name>
         <servlet-class>servlet.SuppliersServlet</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>PurchaseOrders</servlet-name>
+        <servlet-name>PurchaseOrdersServlet</servlet-name>
         <servlet-class>servlet.PurchaseOrders</servlet-class>
     </servlet>
     <servlet>
@@ -36,15 +36,15 @@
         <url-pattern>/TestStock</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>Products</servlet-name>
+        <servlet-name>ProductsServlet</servlet-name>
         <url-pattern>/Products</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>Suppliers</servlet-name>
+        <servlet-name>SuppliersServlet</servlet-name>
         <url-pattern>/Suppliers</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>PurchaseOrders</servlet-name>
+        <servlet-name>PurchaseOrdersServlet</servlet-name>
         <url-pattern>/PurchaseOrders</url-pattern>
     </servlet-mapping>
     <servlet-mapping>

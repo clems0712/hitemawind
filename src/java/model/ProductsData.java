@@ -19,7 +19,7 @@ public class ProductsData {
     EntityManagerFactory entityManagerFactory;
     
     public ProductsData() {
-        entityManagerFactory = Persistence.createEntityManagerFactory("HitemaWind");
+        entityManagerFactory = Persistence.createEntityManagerFactory("TeamworkPU");
         entityManager = entityManagerFactory.createEntityManager();
     }
     
