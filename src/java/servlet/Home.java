@@ -7,6 +7,7 @@ package servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Set;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -47,11 +48,18 @@ public class Home extends HttpServlet {
             throws ServletException, IOException {
         String button = request.getParameter("button");
         Implementation data = new Implementation();
+        request.setAttribute("test", data.getListOrders());
+        
         switch (button) {
             case "commande":
                 request.setAttribute("data", data.getListOrders());
-                System.out.println("servlet.Home.doPost()"+ data.getListOrders());
                 request.getRequestDispatcher("/listeCommandes.jsp").forward(request, response);
+            case "facture" :
+                request.setAttribute("data", data.getListInvoices());
+                request.getRequestDispatcher("/listInvoices.jsp").forward(request, response);
+            case "infoUser": 
+                request.setAttribute("data", data.getListEmployes());
+                request.getRequestDispatcher("/listInfoUser.jsp").forward(request, response);
             default:
                 doGet(request, response);
         }

@@ -25,7 +25,16 @@ public class Implementation {
     
     public List<Orders> getListOrders(){
        List<Orders> orders = entityManager.createNamedQuery("Orders.findAll").getResultList();
-       System.out.println("model.Implementation.getListOrders() : " + orders.toString());
        return orders;
+    }
+    
+    public List<Orders> getListInvoices(){
+       List<Orders> orders = entityManager.createNamedQuery("Invoices.findAll").getResultList();
+       return orders;
+    }
+    
+    public List<Employees> getListEmployes() {
+        List<Employees> employes = entityManager.createNamedQuery("Employees.findAll").getResultList();
+        return employes;
     }
 }

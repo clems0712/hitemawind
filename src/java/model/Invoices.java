@@ -145,10 +145,5 @@ public class Invoices implements Serializable {
         }
         return true;
     }
-
-    @Override
-    public String toString() {
-        return "model.Invoices[ id=" + id + " ]";
-    }
     
 }

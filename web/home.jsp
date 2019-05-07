@@ -16,6 +16,8 @@
         <form action="Home" method="POST">
             <input type="hidden" name="button" id="button" value="home">
             <input type="submit" name="commande" id="commande" value="Commande" onclick="document.getElementById('button').value = 'commande';">
+            <input type="submit" name="facture" id="facture" value="Facture" onclick="document.getElementById('button').value = 'facture';">
+            <input type="submit" name="infoUser" id="infoUser" value="Info Utilisateur" onclick="document.getElementById('button').value = 'infoUser';">
         </form>
 </html>
 
