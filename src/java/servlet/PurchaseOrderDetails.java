@@ -9,17 +9,17 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServlet;     
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import model.InventoryTransactionsData;
+import model.PurchaseOrderDetailsData;
 
 /**
  *
- * @author mikha
+ * @author Ghost
  */
-@WebServlet(name = "TestStock", urlPatterns = {"/TestStock"})
-public class TestStock extends HttpServlet {
+@WebServlet(name = "PurchaseOrderDetails", urlPatterns = {"/PurchaseOrderDetails"})
+public class PurchaseOrderDetails extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -33,9 +33,12 @@ public class TestStock extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
+        
+        PurchaseOrderDetailsData data = new PurchaseOrderDetailsData();
+        
         try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-                request.getRequestDispatcher("/stock.jsp").forward(request, response);
+            request.setAttribute("data", data.getListPurchaseOrderDetails());
+            request.getRequestDispatcher("/PurchaseOrderDetails.jsp").forward(request, response);
         }
     }
 
@@ -51,9 +54,10 @@ public class TestStock extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        InventoryTransactionsData data = new InventoryTransactionsData();
-        request.setAttribute("data", data.getListTransaction());
-        request.getRequestDispatcher("/stock.jsp").forward(request, response);
+        PurchaseOrderDetailsData data = new PurchaseOrderDetailsData();
+        request.setAttribute("test", data.getListPurchaseOrderDetails());
+        System.out.println("YOLO : " + data.getListPurchaseOrderDetails());
+        request.getRequestDispatcher("/PurchaseOrderDetails.jsp").forward(request, response);
     }
 
     /**
@@ -67,7 +71,8 @@ public class TestStock extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        request.getRequestDispatcher("/stock.jsp").forward(request, response);
+        
+        request.getRequestDispatcher("/PurchaseOrderDetails.jsp").forward(request, response);
     }
 
     /**
