@@ -12,7 +12,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import model.InventoryTransactions;
+import model.InventoryTransactionsData;
 
 /**
  *
@@ -33,10 +33,10 @@ public class TestStock extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        InventoryTransactions data = new InventoryTransactions();
+        InventoryTransactionsData data = new InventoryTransactionsData();
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
-                request.setAttribute("data", data.getQuantity());
+                request.setAttribute("data", data.getListTransaction());
                 request.getRequestDispatcher("/stock.jsp").forward(request, response);
         }
     }
