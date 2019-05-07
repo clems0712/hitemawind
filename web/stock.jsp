@@ -7,11 +7,7 @@
         <title>Page de stock</title>
     </head>
     <body>
-<<<<<<< HEAD
-        <h1>Products</h1>
-=======
         <h1>Stock des transactions:</h1>
->>>>>>> 0777ab3e34663649854e828611e52e02da7af67a
         <ul>
             <c:forEach var="d" items="${data}">
                 <li>- ${d}</li>

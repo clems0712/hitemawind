@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
-<<<<<<< HEAD
-  <persistence-unit name="HitemaWind" transaction-type="JTA">
-    <jta-data-source>java:app/test2</jta-data-source>
-=======
   <persistence-unit name="TeamworkPU" transaction-type="JTA">
     <jta-data-source>java:app/northwind</jta-data-source>
->>>>>>> 0777ab3e34663649854e828611e52e02da7af67a
     <exclude-unlisted-classes>false</exclude-unlisted-classes>
     <properties/>
   </persistence-unit>

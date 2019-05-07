@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <welcome-file-list>
+        <welcome-file>stock.jsp</welcome-file>
+    </welcome-file-list>
     <servlet>
         <servlet-name>Home</servlet-name>
         <servlet-class>servlet.Home</servlet-class>
@@ -9,7 +12,6 @@
         <servlet-class>servlet.TestStock</servlet-class>
     </servlet>
     <servlet>
-<<<<<<< HEAD
         <servlet-name>Products</servlet-name>
         <servlet-class>servlet.ProductsServlet</servlet-class>
     </servlet>
@@ -20,10 +22,10 @@
     <servlet>
         <servlet-name>PurchaseOrders</servlet-name>
         <servlet-class>servlet.PurchaseOrders</servlet-class>
-=======
+    </servlet>
+    <servlet>
         <servlet-name>PurchaseOrderDetails</servlet-name>
         <servlet-class>servlet.PurchaseOrderDetails</servlet-class>
->>>>>>> 0777ab3e34663649854e828611e52e02da7af67a
     </servlet>
     <servlet-mapping>
         <servlet-name>Home</servlet-name>
@@ -34,21 +36,20 @@
         <url-pattern>/TestStock</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-<<<<<<< HEAD
-        <servlet-name>ProductsServlet</servlet-name>
+        <servlet-name>Products</servlet-name>
         <url-pattern>/Products</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>SuppliersServlet</servlet-name>
+        <servlet-name>Suppliers</servlet-name>
         <url-pattern>/Suppliers</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>PurchaseOrdersServlet</servlet-name>
+        <servlet-name>PurchaseOrders</servlet-name>
         <url-pattern>/PurchaseOrders</url-pattern>
-=======
+    </servlet-mapping>
+    <servlet-mapping>
         <servlet-name>PurchaseOrderDetails</servlet-name>
         <url-pattern>/PurchaseOrderDetails</url-pattern>
->>>>>>> 0777ab3e34663649854e828611e52e02da7af67a
     </servlet-mapping>
     <session-config>
         <session-timeout>
