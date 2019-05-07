@@ -19,7 +19,7 @@ public class Implementation {
         EntityManagerFactory entityManagerFactory;
 
     public Implementation() {
-            entityManagerFactory = Persistence.createEntityManagerFactory("TeamworkPU");
+            entityManagerFactory = Persistence.createEntityManagerFactory("TeamworkPhilippe");
             entityManager = entityManagerFactory.createEntityManager();
     }
     
@@ -27,5 +27,13 @@ public class Implementation {
        List<Orders> orders = entityManager.createNamedQuery("Orders.findAll").getResultList();
        System.out.println("model.Implementation.getListOrders() : " + orders.toString());
        return orders;
+    }
+    
+    public Employees getEmployeesByEmail(String email){
+       List<Employees> employees = entityManager.createNamedQuery("Employees.findByEmailAddress").setParameter("emailAddress", email).getResultList();
+       if(employees == null || employees.isEmpty()){
+           return null
+       }
+       return employees.get(0);
     }
 }
