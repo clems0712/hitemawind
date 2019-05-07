@@ -1,7 +1,7 @@
 <%-- 
     Document   : stock
     Created on : 7 mai 2019, 12:06:51
-    Author     : mikha
+    Author     : max
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -12,10 +12,10 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Products</h1>
+        <h1>Suppliers</h1>
         <ul>
             <c:forEach var="d" items="${data}">
-                <li>- ${d}</li>
+                <li>${d.supplierIds}</li>
             </c:forEach>
         </ul>
     </body>

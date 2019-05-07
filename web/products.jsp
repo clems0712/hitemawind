@@ -1,7 +1,7 @@
 <%-- 
     Document   : stock
     Created on : 7 mai 2019, 12:06:51
-    Author     : mikha
+    Author     : max
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>

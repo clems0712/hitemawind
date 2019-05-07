@@ -18,8 +18,8 @@ public class InventoryTransactionsData {
     EntityManagerFactory entityManagerFactory;
     
     public InventoryTransactionsData() {
-            entityManagerFactory = Persistence.createEntityManagerFactory("HitemaWind");
-            entityManager = entityManagerFactory.createEntityManager();
+        entityManagerFactory = Persistence.createEntityManagerFactory("HitemaWind");
+        entityManager = entityManagerFactory.createEntityManager();
     }
     
     public List<InventoryTransactions> getListTransaction(){
