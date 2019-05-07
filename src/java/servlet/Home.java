@@ -11,6 +11,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import model.Employees;
 import model.Implementation;
 
 /**
@@ -46,15 +47,24 @@ public class Home extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         String button = request.getParameter("button");
+        String email = request.getParameter("email");
         Implementation data = new Implementation();
-        switch (button) {
-            case "commande":
-                request.setAttribute("data", data.getListOrders());
-                System.out.println("servlet.Home.doPost()"+ data.getListOrders());
-                request.getRequestDispatcher("/listeCommandes.jsp").forward(request, response);
-            default:
-                doGet(request, response);
+        Employees employe = data.getEmployeesByEmail(email);
+        System.out.print(employe);
+        if(employe != null){
+            request.getRequestDispatcher("/index.html").forward(request, response);
+        }else{
+            request.getRequestDispatcher("/connexion.html").forward(request, response);
         }
+//        switch (button) {
+//            case "commande":
+//                request.setAttribute("data", data.getListOrders());
+//                System.out.println("servlet.Home.doPost()"+ data.getListOrders());
+//                request.getRequestDispatcher("/listeCommandes.jsp").forward(request, response);
+//            default:
+//                doGet(request, response);
+//        }
+        
     }
 
     /**
