@@ -94,10 +94,8 @@
 
             <!-- MAIN CONTENT-->
             <div class="main-content">
-                <input type="hidden" name="button" id="button" value="home">
-           
-                
-                            <table>
+                <input type="hidden" name="button" id="button" value="home">                
+                <table class="table table-borderless table-data3">
                <tr>
                    <th>Entreprise</th>
                    <th>Nom</th>
@@ -106,7 +104,7 @@
                    <th>Poste</th>
                </tr>
                <tbody>
-           <c:forEach var="invoice" items="${data}">
+           <c:forEach var="invoice" items="${data}">²
                <tr>
                    <td>${invoice.getCompany()}</td>
                    <td>${invoice.getLastName()}</td>

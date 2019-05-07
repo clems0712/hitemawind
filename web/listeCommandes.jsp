@@ -96,7 +96,7 @@
             <!-- MAIN CONTENT-->
             <div class="main-content">
                 <input type="hidden" name="button" id="button" value="home">
-                      <table>
+                <table class="table table-borderless table-data3">
                <tr>
                    <th>Id Commande</th>
                    <th>Employé</th>
